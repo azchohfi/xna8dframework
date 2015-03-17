@@ -1,82 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C07C1BAD-FC7A-4483-9E1C-B049F58D48AC}</ProjectGuid>
-    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{AD90531A-49CC-42F8-8D9E-266EB9848B07}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>XNA8DFramework_iPhone</RootNamespace>
-    <AssemblyName>XNA8DFramework_iPhone</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XNA8DFramework</RootNamespace>
+    <AssemblyName>XNA8DFramework_Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <TargetFrameworkVersion>v2.2</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-    <DebugSymbols>True</DebugSymbols>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>False</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG,IPHONE</DefineConstants>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;ANDROID</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>None</MtouchLink>
-    <MtouchDebug>True</MtouchDebug>
-    <ConsolePause>False</ConsolePause>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
-    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchLink>None</MtouchLink>
-    <ConsolePause>False</ConsolePause>
-    <DefineConstants>IPHONE</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
-    <DebugSymbols>True</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>False</Optimize>
-    <OutputPath>bin\iPhone\Debug</OutputPath>
-    <DefineConstants>DEBUG,IPHONE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <MtouchDebug>True</MtouchDebug>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <ConsolePause>False</ConsolePause>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
-    <OutputPath>bin\iPhone\Release</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <ConsolePause>False</ConsolePause>
-    <CodesignKey>iPhone Developer</CodesignKey>
-    <DefineConstants>IPHONE</DefineConstants>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhoneSimulator' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
-    <OutputPath>bin\Distribution</OutputPath>
-    <WarningLevel>4</WarningLevel>
-    <DefineConstants>IPHONE</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Distribution|iPhone' ">
-    <DebugType>none</DebugType>
-    <Optimize>True</Optimize>
-    <OutputPath>bin\Distribution</OutputPath>
-    <DefineConstants>IPHONE</DefineConstants>
-    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>packages\MonoGame.Framework.Android.3.3.0.0\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="monotouch" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
+    <Compile Include="AnimacaoFrames.cs" />
+    <Compile Include="AnimacaoMultiplosArquivos.cs" />
+    <Compile Include="AnimatableString.cs" />
+    <Compile Include="AnimatableTexture.cs" />
     <Compile Include="Animations\AlphaAnimation.cs" />
     <Compile Include="Animations\AlphaDoubleAnimation.cs" />
     <Compile Include="Animations\AngleAnimation.cs" />
@@ -100,16 +76,22 @@
     <Compile Include="Animations\ScaleAnimation.cs" />
     <Compile Include="Animations\ScaleFloatAnimation.cs" />
     <Compile Include="Animations\ScaleVector2Animation.cs" />
+    <Compile Include="Animations\SentidosAnim.cs" />
     <Compile Include="Animations\ShakeAnimation.cs" />
     <Compile Include="Animations\SimpleColorAnimation.cs" />
     <Compile Include="Animations\SimpleVector2Animation.cs" />
     <Compile Include="Animations\Vector2Animation.cs" />
     <Compile Include="Animations\VoidAnimation.cs" />
+    <Compile Include="AnimUpdateEventArgs.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FPSCounter.cs" />
     <Compile Include="Parallax\Parallax.cs" />
     <Compile Include="Parallax\ParallaxLayer.cs" />
     <Compile Include="Particles\Particle.cs" />
     <Compile Include="Particles\ParticlesManager.cs" />
     <Compile Include="Primitives\Primitives.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.Android.cs" />
     <Compile Include="ScreenManager\GameScreen.cs" />
     <Compile Include="ScreenManager\InputService.cs" />
     <Compile Include="ScreenManager\IScreenFactory.cs" />
@@ -126,6 +108,7 @@
     <Compile Include="Screens\MessageBoxScreen.cs" />
     <Compile Include="Screens\TabHostScreen.cs" />
     <Compile Include="Screens\TabScreen.cs" />
+    <Compile Include="ScrollableGame.cs" />
     <Compile Include="UI\Button.cs" />
     <Compile Include="UI\Canvas.cs" />
     <Compile Include="UI\CheckBox.cs" />
@@ -146,21 +129,23 @@
     <Compile Include="UI\SpeechBubble.cs" />
     <Compile Include="UI\StackPanel.cs" />
     <Compile Include="UI\TextArea.cs" />
-    <Compile Include="AnimacaoFrames.cs" />
-    <Compile Include="AnimacaoMultiplosArquivos.cs" />
-    <Compile Include="AnimatableString.cs" />
-    <Compile Include="AnimatableTexture.cs" />
-    <Compile Include="AnimUpdateEventArgs.cs" />
-    <Compile Include="ExtensionMethods.cs" />
-    <Compile Include="FPSCounter.cs" />
-    <Compile Include="ScrollableGame.cs" />
-    <Compile Include="Animations\SentidosAnim.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Documents\GitHub\MonoGame\MonoGame.Framework\MonoGame.Framework.iOS.csproj">
-      <Project>{DB8508BB-9849-4CC2-BC0F-8EB5DACB3C47}</Project>
-      <Name>MonoGame.Framework.iOS</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
 </Project>

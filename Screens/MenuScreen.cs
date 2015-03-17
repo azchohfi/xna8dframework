@@ -108,7 +108,7 @@ namespace GameStateManagement
 #if IPHONE
 			int scale = 1;
 			if(ScreenManager.FixScaleIPhone)
-				scale = (int)MonoTouch.UIKit.UIScreen.MainScreen.Scale;
+				scale = (int)UIKit.UIScreen.MainScreen.Scale;
 #else
 			const int scale = 1;
 #endif
@@ -207,7 +207,7 @@ namespace GameStateManagement
 #if IPHONE
 			float xDif = 1;
 			if(ScreenManager.FixScaleIPhone)
-				xDif = MonoTouch.UIKit.UIScreen.MainScreen.Scale;
+				xDif = (float)UIKit.UIScreen.MainScreen.Scale;
 #else
 			const float xDif = 1;
 #endif
@@ -237,7 +237,7 @@ namespace GameStateManagement
 #if IPHONE
 					int scale = 1;
 					if (ScreenManager.FixScaleIPhone)
-						scale = (int) MonoTouch.UIKit.UIScreen.MainScreen.Scale;
+						scale = (int) UIKit.UIScreen.MainScreen.Scale;
 #else
 					const int scale = 1;
 #endif
@@ -355,7 +355,7 @@ namespace GameStateManagement
 #if IPHONE
 			float yTitle = 40;
 		    if (ScreenManager.FixScaleIPhone)
-		        yTitle *= MonoTouch.UIKit.UIScreen.MainScreen.Scale;
+		        yTitle *= (float)UIKit.UIScreen.MainScreen.Scale;
 #else
 			const float yTitle = 40;
 #endif
@@ -375,7 +375,7 @@ namespace GameStateManagement
 #if IPHONE
 			float titleYDif = 100;
 		    if (ScreenManager.FixScaleIPhone)
-		        titleYDif *= MonoTouch.UIKit.UIScreen.MainScreen.Scale;
+		        titleYDif *= (float)UIKit.UIScreen.MainScreen.Scale;
 #else
 			const float titleYDif = 100;
 #endif

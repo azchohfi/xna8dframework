@@ -10,7 +10,7 @@ using XNA8DFramework.Animations;
 using Microsoft.Xna.Framework.GamerServices;
 #endif
 #if IPHONE
-using MonoTouch.UIKit;
+using UIKit;
 using System.Linq;
 #endif
 
