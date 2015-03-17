@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{131C2DED-BA24-4D41-A7E8-6DEEF564DF5A}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XNA8DFramework</RootNamespace>
+    <AssemblyName>XNA8DFramework_Silverlight</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>DeadCodeRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="SilverArcade.SilverSprite, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>Silversprite\Release\SilverArcade.SilverSprite.dll</HintPath>
+    </Reference>
+    <Reference Include="SilverArcade.SilverSprite.Core, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>Silversprite\Release\SilverArcade.SilverSprite.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimacaoFrames.cs" />
+    <Compile Include="AnimacaoMultiplosArquivos.cs" />
+    <Compile Include="AnimatableString.cs" />
+    <Compile Include="AnimatableTexture.cs" />
+    <Compile Include="Animations\AlphaAnimation.cs" />
+    <Compile Include="Animations\AlphaDoubleAnimation.cs" />
+    <Compile Include="Animations\AngleAnimation.cs" />
+    <Compile Include="Animations\AngleFloatAnimation.cs" />
+    <Compile Include="Animations\Animation.cs" />
+    <Compile Include="Animations\Animator.cs" />
+    <Compile Include="Animations\BounceAnimation.cs" />
+    <Compile Include="Animations\ColorAnimation.cs" />
+    <Compile Include="Animations\EaseAngleAnimation.cs" />
+    <Compile Include="Animations\EaseScaleAnimation.cs" />
+    <Compile Include="Animations\EaseVector2Animation.cs" />
+    <Compile Include="Animations\IAlphaAnimatable.cs" />
+    <Compile Include="Animations\IAngleAnimatable.cs" />
+    <Compile Include="Animations\IAnimatableOrdable.cs" />
+    <Compile Include="Animations\IColorAnimatable.cs" />
+    <Compile Include="Animations\IDrawable8D.cs" />
+    <Compile Include="Animations\IScale2DAnimatable.cs" />
+    <Compile Include="Animations\IScaleAnimatable.cs" />
+    <Compile Include="Animations\ISizeable.cs" />
+    <Compile Include="Animations\IVector2Animatable.cs" />
+    <Compile Include="Animations\Scale2DAnimation.cs" />
+    <Compile Include="Animations\ScaleAnimation.cs" />
+    <Compile Include="Animations\ScaleFloatAnimation.cs" />
+    <Compile Include="Animations\ScaleVector2Animation.cs" />
+    <Compile Include="Animations\SentidosAnim.cs" />
+    <Compile Include="Animations\VoidAnimation.cs" />
+    <Compile Include="Animations\ShakeAnimation.cs" />
+    <Compile Include="Animations\SimpleColorAnimation.cs" />
+    <Compile Include="Animations\SimpleVector2Animation.cs" />
+    <Compile Include="Animations\Vector2Animation.cs" />
+    <Compile Include="AnimUpdateEventArgs.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FPSCounter.cs" />
+    <Compile Include="Parallax\Parallax.cs" />
+    <Compile Include="Parallax\ParallaxLayer.cs" />
+    <Compile Include="Particles\Particle.cs" />
+    <Compile Include="Particles\ParticlesManager.cs" />
+    <Compile Include="Primitives\Primitives.cs" />
+    <Compile Include="ScreenManager\GameScreen.cs" />
+    <Compile Include="ScreenManager\InputService.cs" />
+    <Compile Include="ScreenManager\IScreenFactory.cs" />
+    <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="Screens\BackgroundScreen.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\MenuCheckBoxEntry.cs" />
+    <Compile Include="Screens\MenuEntry.cs" />
+    <Compile Include="Screens\MenuImageEntry.cs" />
+    <Compile Include="Screens\MenuPicker.cs" />
+    <Compile Include="Screens\MenuPickerHorizontal.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\MenuTextEntry.cs" />
+    <Compile Include="Screens\MessageBoxScreen.cs" />
+    <Compile Include="Screens\TabHostScreen.cs" />
+    <Compile Include="Screens\TabScreen.cs" />
+    <Compile Include="ScrollableGame.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="UI\Canvas.cs" />
+    <Compile Include="UI\CheckBox.cs" />
+    <Compile Include="UI\DGCScroller.cs" />
+    <Compile Include="UI\DropDownList.cs" />
+    <Compile Include="UI\DropDownListImageItem.cs" />
+    <Compile Include="UI\DropDownListItem.cs" />
+    <Compile Include="UI\DropDownListTextItem.cs" />
+    <Compile Include="UI\Input.cs" />
+    <Compile Include="UI\InputBox.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\IScroll.cs" />
+    <Compile Include="UI\IScrollable.cs" />
+    <Compile Include="UI\IScrollableCullable.cs" />
+    <Compile Include="UI\Scroll.cs" />
+    <Compile Include="UI\ScrollableImage.cs" />
+    <Compile Include="UI\ScrollableRenderTarget.cs" />
+    <Compile Include="UI\ScrollableRenderTargetScroll.cs" />
+    <Compile Include="UI\SpeechBubble.cs" />
+    <Compile Include="UI\StackPanel.cs" />
+    <Compile Include="UI\TextArea.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

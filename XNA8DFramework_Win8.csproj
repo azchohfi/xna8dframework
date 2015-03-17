@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CCCF9F01-8866-4077-B971-5B659D28444A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XNA8DFramework</RootNamespace>
+    <AssemblyName>XNA8DFramework_Metro</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE, WINDOWS, WINDOWS8</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE, WINDOWS, WINDOWS8</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS8</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS8</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AnimacaoFrames.cs" />
+    <Compile Include="AnimacaoMultiplosArquivos.cs" />
+    <Compile Include="AnimatableString.cs" />
+    <Compile Include="AnimatableTexture.cs" />
+    <Compile Include="Animations\AlphaAnimation.cs" />
+    <Compile Include="Animations\AlphaDoubleAnimation.cs" />
+    <Compile Include="Animations\AngleAnimation.cs" />
+    <Compile Include="Animations\AngleFloatAnimation.cs" />
+    <Compile Include="Animations\Animation.cs" />
+    <Compile Include="Animations\Animator.cs" />
+    <Compile Include="Animations\BounceAnimation.cs" />
+    <Compile Include="Animations\ColorAnimation.cs" />
+    <Compile Include="Animations\EaseAngleAnimation.cs" />
+    <Compile Include="Animations\EaseScaleAnimation.cs" />
+    <Compile Include="Animations\EaseVector2Animation.cs" />
+    <Compile Include="Animations\IAlphaAnimatable.cs" />
+    <Compile Include="Animations\IAngleAnimatable.cs" />
+    <Compile Include="Animations\IAnimatableOrdable.cs" />
+    <Compile Include="Animations\IColorAnimatable.cs" />
+    <Compile Include="Animations\IDrawable8D.cs" />
+    <Compile Include="Animations\IScale2DAnimatable.cs" />
+    <Compile Include="Animations\IScaleAnimatable.cs" />
+    <Compile Include="Animations\ISizeable.cs" />
+    <Compile Include="Animations\IVector2Animatable.cs" />
+    <Compile Include="Animations\Scale2DAnimation.cs" />
+    <Compile Include="Animations\ScaleAnimation.cs" />
+    <Compile Include="Animations\ScaleFloatAnimation.cs" />
+    <Compile Include="Animations\ScaleVector2Animation.cs" />
+    <Compile Include="Animations\SentidosAnim.cs" />
+    <Compile Include="Animations\VoidAnimation.cs" />
+    <Compile Include="Animations\ShakeAnimation.cs" />
+    <Compile Include="Animations\SimpleColorAnimation.cs" />
+    <Compile Include="Animations\SimpleVector2Animation.cs" />
+    <Compile Include="Animations\Vector2Animation.cs" />
+    <Compile Include="AnimUpdateEventArgs.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FPSCounter.cs" />
+    <Compile Include="ICloneable.cs" />
+    <Compile Include="Parallax\Parallax.cs" />
+    <Compile Include="Parallax\ParallaxLayer.cs" />
+    <Compile Include="Particles\Particle.cs" />
+    <Compile Include="Particles\ParticlesManager.cs" />
+    <Compile Include="Primitives\Primitives.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenManager\GameScreen.cs" />
+    <Compile Include="ScreenManager\InputService.cs" />
+    <Compile Include="ScreenManager\IScreenFactory.cs" />
+    <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="Screens\BackgroundScreen.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\MenuCheckBoxEntry.cs" />
+    <Compile Include="Screens\MenuEntry.cs" />
+    <Compile Include="Screens\MenuImageEntry.cs" />
+    <Compile Include="Screens\MenuPicker.cs" />
+    <Compile Include="Screens\MenuPickerHorizontal.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\MenuTextEntry.cs" />
+    <Compile Include="Screens\MessageBoxScreen.cs" />
+    <Compile Include="Screens\TabHostScreen.cs" />
+    <Compile Include="Screens\TabScreen.cs" />
+    <Compile Include="ScrollableGame.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="UI\Canvas.cs" />
+    <Compile Include="UI\CheckBox.cs" />
+    <Compile Include="UI\DGCScroller.cs" />
+    <Compile Include="UI\DropDownList.cs" />
+    <Compile Include="UI\DropDownListImageItem.cs" />
+    <Compile Include="UI\DropDownListItem.cs" />
+    <Compile Include="UI\DropDownListTextItem.cs" />
+    <Compile Include="UI\Input.cs" />
+    <Compile Include="UI\InputBox.cs" />
+    <Compile Include="UI\IScroll.cs" />
+    <Compile Include="UI\IScrollable.cs" />
+    <Compile Include="UI\IScrollableCullable.cs" />
+    <Compile Include="UI\Scroll.cs" />
+    <Compile Include="UI\ScrollableImage.cs" />
+    <Compile Include="UI\ScrollableRenderTarget.cs" />
+    <Compile Include="UI\ScrollableRenderTargetScroll.cs" />
+    <Compile Include="UI\SpeechBubble.cs" />
+    <Compile Include="UI\StackPanel.cs" />
+    <Compile Include="UI\TextArea.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Documents\GitHub\MonoGame\MonoGame.Framework\MonoGame.Framework.Windows8.csproj">
+      <Project>{0518563c-acca-4a14-8c5d-ddbe93e2605f}</Project>
+      <Name>MonoGame.Framework.Windows8</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

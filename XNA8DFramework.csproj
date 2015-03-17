@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{BB81C9BB-2A85-4DDD-917F-24B0F2D12CB7}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XNA8DFramework</RootNamespace>
+    <AssemblyName>XNA8DFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaRefreshLevel>1</XnaRefreshLevel>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
+    <XnaCrossPlatformGroupID>2b687273-2934-43ca-8a17-e600c180c54f</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+    <CodeAnalysisRuleSet>DeadCodeRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimatableString.cs" />
+    <Compile Include="Animations\SentidosAnim.cs" />
+    <Compile Include="Animations\VoidAnimation.cs" />
+    <Compile Include="FPSCounter.cs" />
+    <Compile Include="Primitives\Primitives.cs" />
+    <Compile Include="Animations\AlphaAnimation.cs" />
+    <Compile Include="Animations\AlphaDoubleAnimation.cs" />
+    <Compile Include="Animations\AngleAnimation.cs" />
+    <Compile Include="Animations\AngleFloatAnimation.cs" />
+    <Compile Include="AnimacaoFrames.cs" />
+    <Compile Include="AnimacaoMultiplosArquivos.cs" />
+    <Compile Include="AnimatableTexture.cs" />
+    <Compile Include="Animations\Animation.cs" />
+    <Compile Include="Animations\Animator.cs" />
+    <Compile Include="AnimUpdateEventArgs.cs" />
+    <Compile Include="Animations\BounceAnimation.cs" />
+    <Compile Include="Animations\ColorAnimation.cs" />
+    <Compile Include="Animations\EaseScaleAnimation.cs" />
+    <Compile Include="Animations\EaseVector2Animation.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="Animations\IAlphaAnimatable.cs" />
+    <Compile Include="Animations\IAngleAnimatable.cs" />
+    <Compile Include="Animations\IAnimatableOrdable.cs" />
+    <Compile Include="Animations\IColorAnimatable.cs" />
+    <Compile Include="Animations\IDrawable8D.cs" />
+    <Compile Include="Animations\IScale2DAnimatable.cs" />
+    <Compile Include="Animations\IScaleAnimatable.cs" />
+    <Compile Include="Animations\ISizeable.cs" />
+    <Compile Include="Animations\IVector2Animatable.cs" />
+    <Compile Include="Parallax\Parallax.cs" />
+    <Compile Include="Parallax\ParallaxLayer.cs" />
+    <Compile Include="Particles\Particle.cs" />
+    <Compile Include="Particles\ParticlesManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Animations\Scale2DAnimation.cs" />
+    <Compile Include="Animations\ScaleAnimation.cs" />
+    <Compile Include="Animations\ScaleFloatAnimation.cs" />
+    <Compile Include="Animations\ScaleVector2Animation.cs" />
+    <Compile Include="ScreenManager\IScreenFactory.cs" />
+    <Compile Include="Screens\BackgroundScreen.cs" />
+    <Compile Include="ScreenManager\GameScreen.cs" />
+    <Compile Include="ScreenManager\InputService.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\MenuCheckBoxEntry.cs" />
+    <Compile Include="Screens\MenuEntry.cs" />
+    <Compile Include="Screens\MenuImageEntry.cs" />
+    <Compile Include="Screens\MenuPicker.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\MenuTextEntry.cs" />
+    <Compile Include="Screens\MessageBoxScreen.cs" />
+    <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="Screens\MenuPickerHorizontal.cs" />
+    <Compile Include="Screens\TabHostScreen.cs" />
+    <Compile Include="Screens\TabScreen.cs" />
+    <Compile Include="ScrollableGame.cs" />
+    <Compile Include="Animations\ShakeAnimation.cs" />
+    <Compile Include="Animations\SimpleColorAnimation.cs" />
+    <Compile Include="Animations\SimpleVector2Animation.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="UI\Canvas.cs" />
+    <Compile Include="UI\CheckBox.cs" />
+    <Compile Include="UI\DGCScroller.cs" />
+    <Compile Include="UI\DropDownList.cs" />
+    <Compile Include="UI\DropDownListImageItem.cs" />
+    <Compile Include="UI\DropDownListItem.cs" />
+    <Compile Include="UI\DropDownListTextItem.cs" />
+    <Compile Include="UI\Input.cs" />
+    <Compile Include="UI\InputBox.cs" />
+    <Compile Include="UI\IScroll.cs" />
+    <Compile Include="UI\IScrollable.cs" />
+    <Compile Include="UI\IScrollableCullable.cs" />
+    <Compile Include="UI\Scroll.cs" />
+    <Compile Include="UI\ScrollableImage.cs" />
+    <Compile Include="UI\ScrollableRenderTarget.cs" />
+    <Compile Include="UI\ScrollableRenderTargetScroll.cs" />
+    <Compile Include="UI\SpeechBubble.cs" />
+    <Compile Include="Animations\Vector2Animation.cs" />
+    <Compile Include="UI\StackPanel.cs" />
+    <Compile Include="UI\TextArea.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DeadCodeRules.ruleset" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>
