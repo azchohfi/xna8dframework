@@ -5,24 +5,22 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XNA8DVisualizadorAnims")]
-[assembly: AssemblyProduct("XNA8DVisualizadorAnims")]
+[assembly: AssemblyTitle("XNA8DVisualizadorImagens")]
+[assembly: AssemblyProduct("XNA8DVisualizadorImagens")]
+[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type. Only Windows
-// assemblies support COM.
+// COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
 
-// On Windows, the following GUID is for the ID of the typelib if this
-// project is exposed to COM. On other platforms, it unique identifies the
-// title storage container when deploying this assembly to the device.
-[assembly: Guid("51a558ca-0077-44d6-89f7-de8dcefd1be0")]
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("da1d4da0-3727-46bd-a2a5-1b9d9d784786")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -31,4 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.0.0.0")]
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("3.4.0.8")]
+[assembly: AssemblyFileVersion("3.4.0.8")]

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{523FB954-F276-42B9-B61A-755648897BA5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XNA8DFramework</RootNamespace>
+    <AssemblyName>XNA8DFramework.Windows</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\MonoGame.Framework.WindowsDX.3.3.0.0\lib\net40\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnimacaoFrames.cs" />
+    <Compile Include="AnimacaoMultiplosArquivos.cs" />
+    <Compile Include="AnimatableString.cs" />
+    <Compile Include="AnimatableTexture.cs" />
+    <Compile Include="Animations\AlphaAnimation.cs" />
+    <Compile Include="Animations\AlphaDoubleAnimation.cs" />
+    <Compile Include="Animations\AngleAnimation.cs" />
+    <Compile Include="Animations\AngleFloatAnimation.cs" />
+    <Compile Include="Animations\Animation.cs" />
+    <Compile Include="Animations\Animator.cs" />
+    <Compile Include="Animations\BounceAnimation.cs" />
+    <Compile Include="Animations\ColorAnimation.cs" />
+    <Compile Include="Animations\EaseAngleAnimation.cs" />
+    <Compile Include="Animations\EaseScaleAnimation.cs" />
+    <Compile Include="Animations\EaseVector2Animation.cs" />
+    <Compile Include="Animations\IAlphaAnimatable.cs" />
+    <Compile Include="Animations\IAngleAnimatable.cs" />
+    <Compile Include="Animations\IAnimatableOrdable.cs" />
+    <Compile Include="Animations\IColorAnimatable.cs" />
+    <Compile Include="Animations\IDrawable8D.cs" />
+    <Compile Include="Animations\IScale2DAnimatable.cs" />
+    <Compile Include="Animations\IScaleAnimatable.cs" />
+    <Compile Include="Animations\ISizeable.cs" />
+    <Compile Include="Animations\IVector2Animatable.cs" />
+    <Compile Include="Animations\Scale2DAnimation.cs" />
+    <Compile Include="Animations\ScaleAnimation.cs" />
+    <Compile Include="Animations\ScaleFloatAnimation.cs" />
+    <Compile Include="Animations\ScaleVector2Animation.cs" />
+    <Compile Include="Animations\SentidosAnim.cs" />
+    <Compile Include="Animations\ShakeAnimation.cs" />
+    <Compile Include="Animations\SimpleColorAnimation.cs" />
+    <Compile Include="Animations\SimpleVector2Animation.cs" />
+    <Compile Include="Animations\Vector2Animation.cs" />
+    <Compile Include="Animations\VoidAnimation.cs" />
+    <Compile Include="AnimUpdateEventArgs.cs" />
+    <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="FPSCounter.cs" />
+    <Compile Include="Parallax\Parallax.cs" />
+    <Compile Include="Parallax\ParallaxLayer.cs" />
+    <Compile Include="Particles\Particle.cs" />
+    <Compile Include="Particles\ParticlesManager.cs" />
+    <Compile Include="Primitives\Primitives.cs" />
+    <Compile Include="Properties\AssemblyInfo.Windows.cs" />
+    <Compile Include="ScreenManager\GameScreen.cs" />
+    <Compile Include="ScreenManager\InputService.cs" />
+    <Compile Include="ScreenManager\IScreenFactory.cs" />
+    <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="Screens\BackgroundScreen.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\MenuCheckBoxEntry.cs" />
+    <Compile Include="Screens\MenuEntry.cs" />
+    <Compile Include="Screens\MenuImageEntry.cs" />
+    <Compile Include="Screens\MenuPicker.cs" />
+    <Compile Include="Screens\MenuPickerHorizontal.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\MenuTextEntry.cs" />
+    <Compile Include="Screens\MessageBoxScreen.cs" />
+    <Compile Include="Screens\TabHostScreen.cs" />
+    <Compile Include="Screens\TabScreen.cs" />
+    <Compile Include="ScrollableGame.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="UI\Canvas.cs" />
+    <Compile Include="UI\CheckBox.cs" />
+    <Compile Include="UI\DGCScroller.cs" />
+    <Compile Include="UI\DropDownList.cs" />
+    <Compile Include="UI\DropDownListImageItem.cs" />
+    <Compile Include="UI\DropDownListItem.cs" />
+    <Compile Include="UI\DropDownListTextItem.cs" />
+    <Compile Include="UI\Input.cs" />
+    <Compile Include="UI\InputBox.cs" />
+    <Compile Include="UI\IScroll.cs" />
+    <Compile Include="UI\IScrollable.cs" />
+    <Compile Include="UI\IScrollableCullable.cs" />
+    <Compile Include="UI\Scroll.cs" />
+    <Compile Include="UI\ScrollableImage.cs" />
+    <Compile Include="UI\ScrollableRenderTarget.cs" />
+    <Compile Include="UI\ScrollableRenderTargetScroll.cs" />
+    <Compile Include="UI\SpeechBubble.cs" />
+    <Compile Include="UI\StackPanel.cs" />
+    <Compile Include="UI\TextArea.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
