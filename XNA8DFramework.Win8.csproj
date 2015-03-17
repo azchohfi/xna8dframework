@@ -188,6 +188,9 @@
     <Reference Include="MonoGame.Framework">
       <HintPath>packages\MonoGame.Framework.Windows8.3.3.0.0\lib\netcore\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>MonoGameNetAssemblies\Windows8\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

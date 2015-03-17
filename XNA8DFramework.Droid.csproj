@@ -42,6 +42,9 @@
     <Reference Include="MonoGame.Framework">
       <HintPath>packages\MonoGame.Framework.Android.3.3.0.0\lib\MonoAndroid\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>MonoGameNetAssemblies\Droid\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />

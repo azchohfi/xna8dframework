@@ -1,6 +1,11 @@
 version: 1.0.0.{build}
 configuration: Release
 platform: Any CPU
+
+# restore NuGet packages before running MSBuild
+before_build:
+  - nuget restore
+
 build:
   project: XNA8DFramework.sln
   verbosity: minimal
